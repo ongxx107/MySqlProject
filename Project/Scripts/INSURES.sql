@@ -1,0 +1,14 @@
+CREATE TABLE INSURES (
+    Start_Date DATE NOT NULL,
+    End_Date DATE NOT NULL,
+    Insurer_ID INT NOT NULL,
+    PID INT NOT NULL,
+    PRIMARY KEY (Insurer_ID , PID),
+    FOREIGN KEY (Insurer_ID)
+        REFERENCES INSURANCE_PROVIDERS (Insurer_ID),
+    CONSTRAINT DropPatient1 FOREIGN KEY (PID)
+        REFERENCES PATIENT (PID)
+        ON DELETE CASCADE ON UPDATE CASCADE,
+    CHECK (Start_Date <= End_Date)
+);
+

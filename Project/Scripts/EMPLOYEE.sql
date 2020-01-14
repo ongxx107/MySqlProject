@@ -1,0 +1,11 @@
+CREATE TABLE EMPLOYEE (
+    SSN CHAR(9) NOT NULL,
+    E_Name VARCHAR(30) NOT NULL,
+    Info VARCHAR(30),
+    Pay_Type CHAR(6),
+    Department INT,
+    PRIMARY KEY (SSN),
+    CONSTRAINT DROPDEP FOREIGN KEY (Department)
+        REFERENCES DEPARTMENT (Dep_ID)
+        ON DELETE SET NULL
+);

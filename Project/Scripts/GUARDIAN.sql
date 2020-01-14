@@ -1,0 +1,8 @@
+  CREATE TABLE GUARDIAN (
+    Guard_ID INT NOT NULL,
+    G_Name VARCHAR(25) NOT NULL,
+    Address VARCHAR(50) NOT NULL,
+    Phone CHAR(10) NOT NULL,
+    Email VARCHAR(25),
+    PRIMARY KEY (Guard_ID)
+);

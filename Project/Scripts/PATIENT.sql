@@ -1,0 +1,12 @@
+CREATE TABLE PATIENT (
+    PID INT NOT NULL,
+    F_Name VARCHAR(15) NOT NULL,
+    L_Name VARCHAR(15) NOT NULL,
+    Address VARCHAR(30),
+    Phone CHAR(10),
+    Ins_Num VARCHAR(15) NOT NULL,
+    DOB DATE,
+    Guard_ID INT NOT NULL,
+    Emer_ID INT NOT NULL,
+    PRIMARY KEY (PID)
+);
